@@ -8,9 +8,6 @@ router.get("/api/workouts", (req, res) => {
     .then(dbWorkout => {
       res.json(dbWorkout);
     })
-    // .catch(err => {
-    //   res.status(400).json(err);
-    // });
 }); 
 
 
@@ -20,16 +17,13 @@ router.get("/api/workouts", (req, res) => {
     .then(dbWorkout => {
       res.json(dbWorkout);
     })
-    // .catch(err => {
-    //   res.status(400).json(err);
-    // });
   });
 
 
   router.put("/api/workouts/:id", (req, res) => {
     console.log("We hit the params ??", req.params) 
     console.log("We hit the body ? ??", req.body) 
-    // var newExercise = JSON.parse(req.body)
+   
     
         Workout.findOneAndUpdate(
             { _id: req.params.id }, 
