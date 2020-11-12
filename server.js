@@ -26,7 +26,7 @@ var apiroutes=require("./routes/apiroutes.js")
 app.use(routes)
 app.use(apiroutes)
 
-
+//start server
 app.listen(PORT, () => {
   console.log(`App running on port ${PORT}!`);
 });
